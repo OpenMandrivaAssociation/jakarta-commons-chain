@@ -56,6 +56,7 @@ Source4:        %{base_name}-%{version}-jpp-depmap.xml
 Source5:        %{base_name}-%{version}-pom.xml
 
 BuildRequires:  jpackage-utils >= 0:1.7.2
+BuildRequires:  java-rpmbuild
 BuildRequires:  ant >= 0:1.6
 BuildRequires:  junit
 %if %{with_maven}
