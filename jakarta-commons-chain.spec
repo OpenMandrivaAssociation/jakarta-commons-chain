@@ -40,7 +40,7 @@
 
 Name:           jakarta-commons-chain
 Version:        1.1
-Release:        %mkrel 1.0.1
+Release:        %mkrel 1.0.2
 Epoch:          0
 Summary:        Commons Chain
 License:        Apache Software License 2.0
@@ -102,6 +102,7 @@ required to implement this design patten are extremely simple,
 it is useful to have a base API that facilitates using the pattern, 
 and (more importantly) encouraging composition of command 
 implementations from multiple diverse sources.
+
 Towards that end, the Chain API models a computation as a series 
 of "commands" that can be combined into a "chain". The API for a 
 command consists of a single method (execute()), which is passed 
