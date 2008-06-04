@@ -129,6 +129,7 @@ Group:          Development/Java
 %setup -q -n %{base_name}-%{version}-src
 %remove_java_binaries
 
+%if %{with_maven}
 if [ ! -f %{SOURCE4} ]; then
 export DEPCAT=$(pwd)/%{base_name}-%{version}-depcat.new.xml
 echo '<?xml version="1.0" standalone="yes"?>' > $DEPCAT
@@ -142,6 +143,7 @@ echo >> $DEPCAT
 echo '</depset>' >> $DEPCAT
 /usr/bin/saxon $DEPCAT %{SOURCE2} > %{base_name}-%{version}-depmap.new.xml
 fi
+%endif
 
 %build
 %if %{with_maven}
