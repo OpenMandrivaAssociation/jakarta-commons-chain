@@ -39,21 +39,18 @@
 %define base_name commons-chain
 
 Name:           jakarta-commons-chain
-Version:        1.1
-Release:        %mkrel 1.0.2
+Version:        1.2
+Release:        %mkrel 0.0.1
 Epoch:          0
 Summary:        Commons Chain
 License:        Apache Software License 2.0
 Url:            http://jakarta.apache.org/commons/chain/
 Group:          Development/Java
-Source0:        %{base_name}-%{version}.tar.gz
-# svn export http://svn.apache.org/repos/asf/commons/proper/chain/tags/CHAIN_1_1/ commons-chain-1.1
+Source0:        %{base_name}-%{version}-src.zip
 
 Source1:        pom-maven2jpp-depcat.xsl
 Source2:        pom-maven2jpp-newdepmap.xsl
 Source3:        pom-maven2jpp-mapdeps.xsl
-Source4:        %{base_name}-%{version}-jpp-depmap.xml
-Source5:        %{base_name}-%{version}-pom.xml
 
 BuildRequires:  jpackage-utils >= 0:1.7.2
 BuildRequires:  java-rpmbuild
@@ -129,7 +126,7 @@ Group:          Development/Java
 %endif
 
 %prep
-%setup -q -n %{base_name}-%{version}
+%setup -q -n %{base_name}-%{version}-src
 %remove_java_binaries
 
 if [ ! -f %{SOURCE4} ]; then
@@ -192,7 +189,7 @@ ln -sf ${jar} ${jar/-%{version}/}; done)
 
 # pom
 install -d -m 755 $RPM_BUILD_ROOT%{_datadir}/maven2/poms
-install -m 644 %{SOURCE5} \
+install -m 644 pom.xml \
     $RPM_BUILD_ROOT%{_datadir}/maven2/poms/JPP-%{name}.pom
 
 # javadoc
@@ -240,7 +237,7 @@ rm -rf $RPM_BUILD_ROOT
 %files javadoc
 %defattr(0644,root,root,0755)
 %doc %{_javadocdir}/%{name}-%{version}
-%ghost %{_javadocdir}/%{name}
+%{_javadocdir}/%{name}
 
 %if %{with_maven}
 %files manual
