@@ -40,7 +40,7 @@
 
 Name:           jakarta-commons-chain
 Version:        1.2
-Release:        %mkrel 2.0.1
+Release:        %mkrel 2.0.2
 Epoch:          0
 Summary:        Commons Chain
 License:        Apache Software License 2.0
