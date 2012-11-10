@@ -1,0 +1,5 @@
+sources:
+  "commons-chain-1.2-src.zip:"	a7d8be973de3930149935f82b1e65b08407c78b3
+  "pom-maven2jpp-depcat.xsl:"	5861cae5f65e559ece90a7342d182f5a534b65de
+  "pom-maven2jpp-mapdeps.xsl:"	81e46abb70b7ed6c5afe8311c655edea70aa8aa8
+  "pom-maven2jpp-newdepmap.xsl:"	834413ffc7f650705ce65ca2c89100153142cd92
