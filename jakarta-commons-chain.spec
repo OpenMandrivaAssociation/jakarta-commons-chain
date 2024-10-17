@@ -44,7 +44,7 @@ Release:        %mkrel 2.0.3
 Epoch:          0
 Summary:        Commons Chain
 License:        Apache Software License 2.0
-Url:            http://jakarta.apache.org/commons/chain/
+Url:            https://jakarta.apache.org/commons/chain/
 Group:          Development/Java
 Source0:        %{base_name}-%{version}-src.zip
 
